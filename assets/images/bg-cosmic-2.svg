@@ -1,0 +1,43 @@
+<svg width="1152" height="394" viewBox="0 0 1152 394" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_920_6669)">
+<path d="M-12 -8H1164V412H-12V-8Z" fill="white" fill-opacity="0.8"/>
+<path d="M-12 -8H1164V412H-12V-8Z" fill="url(#paint0_linear_920_6669)"/>
+<line y1="-1.26482" x2="509.89" y2="-1.26482" transform="matrix(-0.567078 -0.823664 0.909927 -0.414769 573.949 407.98)" stroke="white" stroke-width="2.52964"/>
+<path d="M290.101 409.467L572.848 -8.54306" stroke="white" stroke-width="2.52964"/>
+<path d="M344.955 411.266L514.392 -10.6082" stroke="white" stroke-width="2.52964"/>
+<path d="M403.43 409.198L459.326 -12.6818" stroke="white" stroke-width="2.52964"/>
+<path d="M456.8 408.499L399.17 -14.0625" stroke="white" stroke-width="2.52964"/>
+<path d="M515.241 412.624L344.105 -12.6882" stroke="white" stroke-width="2.52964"/>
+<ellipse cx="429.673" cy="202.863" rx="10.1549" ry="9.69369" transform="rotate(180 429.673 202.863)" fill="white"/>
+<line y1="-1.26482" x2="509.89" y2="-1.26482" transform="matrix(-0.567078 -0.823664 0.909927 -0.414769 861.809 407.977)" stroke="white" stroke-width="2.52964"/>
+<path d="M577.964 409.463L860.712 -8.54696" stroke="white" stroke-width="2.52964"/>
+<path d="M632.812 411.262L802.249 -10.6121" stroke="white" stroke-width="2.52964"/>
+<path d="M691.291 409.2L747.187 -12.6798" stroke="white" stroke-width="2.52964"/>
+<path d="M744.663 408.497L687.034 -14.0645" stroke="white" stroke-width="2.52964"/>
+<path d="M803.096 412.622L631.96 -12.6901" stroke="white" stroke-width="2.52964"/>
+<ellipse cx="717.529" cy="202.863" rx="10.1549" ry="9.69369" transform="rotate(180 717.529 202.863)" fill="white"/>
+<line y1="-1.26482" x2="509.89" y2="-1.26482" transform="matrix(-0.567078 -0.823664 0.909927 -0.414769 1152.61 406.588)" stroke="white" stroke-width="2.52964"/>
+<path d="M868.759 408.072L1151.51 -9.93759" stroke="white" stroke-width="2.52964"/>
+<path d="M923.609 409.869L1093.05 -12.0047" stroke="white" stroke-width="2.52964"/>
+<path d="M982.086 407.807L1037.98 -14.0724" stroke="white" stroke-width="2.52964"/>
+<path d="M1035.46 407.105L977.827 -15.4571" stroke="white" stroke-width="2.52964"/>
+<path d="M1093.9 411.231L922.763 -14.0807" stroke="white" stroke-width="2.52964"/>
+<ellipse cx="1008.33" cy="201.468" rx="10.1549" ry="9.69369" transform="rotate(180 1008.33 201.468)" fill="white"/>
+<line y1="-1.26482" x2="509.89" y2="-1.26482" transform="matrix(-0.536846 -0.84368 0.924365 -0.38151 275.441 411.686)" stroke="white" stroke-width="2.52964"/>
+<path d="M-0.698238 408.066L282.05 -9.94345" stroke="white" stroke-width="2.52964"/>
+<path d="M54.1543 409.863L223.591 -12.0106" stroke="white" stroke-width="2.52964"/>
+<path d="M112.625 407.803L168.521 -14.0763" stroke="white" stroke-width="2.52964"/>
+<path d="M165.997 407.101L108.368 -15.461" stroke="white" stroke-width="2.52964"/>
+<path d="M224.442 411.227L53.3058 -14.0847" stroke="white" stroke-width="2.52964"/>
+<ellipse cx="138.871" cy="201.465" rx="10.1549" ry="9.69369" transform="rotate(180 138.871 201.465)" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_920_6669" x1="1164" y1="202" x2="-686.849" y2="202.605" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D1CDD5"/>
+<stop offset="1" stop-color="#A58AA2"/>
+</linearGradient>
+<clipPath id="clip0_920_6669">
+<rect width="1152" height="394" fill="white"/>
+</clipPath>
+</defs>
+</svg>

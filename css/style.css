@@ -1,3 +1,414 @@
 @import url('reset.css');
 @import url('font.css');
-@import url('animations.css');
+@import url('animation.css');
+
+body{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.yarn-text-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 53%;
+    height: 544px;
+    background-image: url("../assets/images/bg-yarn.png");
+    p{
+        padding: 30px;
+        font-style: oblique;
+        font-size: 110px;
+        font-weight: bold;
+        color: white; 
+    }
+}
+
+.yarn-block{
+    width: 47%;
+    height: 544px;
+    background-color: #B69AB4;
+    background-image: url(../assets/images/lines-bg.svg);
+}
+.stars-block{
+    position: relative;
+    width: 53%;
+    height: 544px;
+    background-image: url("../assets/images/bg\ stars.png");
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* 9 столбцов */
+    grid-template-rows: repeat(5, 1fr);    /* 5 строк */
+    gap: 11px; 
+}
+.stars-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-top: 100px;
+    z-index: 1;
+    color: white;
+    h1{
+        font-size: 80px;
+        font-weight: bold;
+        font-style: oblique;
+    }
+    h2{
+        font-size: 52px;
+        font-weight: bold;
+    }
+}
+
+.star {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.star-ghost{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+.laborotory-block {
+    width: 47%;
+    height: 544px;
+    background-color: #BFC6D3;
+    background-image: url("../assets/images/bg\ faces.png");
+    position: relative;
+    overflow: hidden;
+}
+.laborotory-text {
+    padding-top: 46px;
+    padding-left: 53px;
+    padding-right: 53px;
+    width: 800px;
+    height: 233px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+.laborotory-text-norm {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.laborotory-text-obliq {
+    font-size: 80px;
+    font-weight: bold;
+    font-style: oblique;
+    display: flex;
+}
+.lab-right {
+    margin-left: auto; /* прибивает к правой части только слово лаборатория */
+}
+.faces-container {
+    display: flex;
+    padding-top: 46px;
+    padding-left: 53px;
+    padding-right: 53px;
+    height: 168px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.faces-half-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.faces-img {
+    width: 407px;
+    height: 168px;
+    flex-shrink: 0;
+}
+
+
+.braid-1-block{
+    width: 100%;
+    height: 87px;
+    background-image: url(../assets/images/braid-bg.svg);
+    overflow: hidden;
+}
+.brain-block{
+    position: relative;
+    width: 28%;
+    height: 528px;
+    background-image:  url(../assets/images/bg-brain.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.cosmo-block{
+    position: relative; /* создаем точку отсчета для детей */
+    width: 44%;
+    height: 528px;
+    background-image:  url(../assets/images/bg-cosmic.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.cosmo-block-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.gradient-1-block {
+    position: relative;
+    width: 28%;
+    height: 528px;
+    background-image: url(../assets/images/bg-gradient-1.svg);
+    overflow: hidden; 
+}
+
+.gradient-2-block{
+    width: 38%;
+    height: 556px;
+    background-color: #BFC6D3;
+}
+.spiral-block{
+    width: 25%;
+    height: 556px;
+    background-color: #DDDDE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.face-block{
+    width: 37%;
+    height: 556px;
+    background-color: #E1E4EC;
+    background-image: url(../assets/images/faces-bg.svg);
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.face-block-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.load-left-block{
+    width: 38%;
+    height: 373px;
+    background-color: #787878;
+    background-image: url(../assets/images/bg-loading.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.load-text-block{
+    width: 25%;
+    height: 373px;
+    background-color: #787878;
+    background-image: url(../assets/images/bg-load-text.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        font-size: 52px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+    }
+}
+.load-right-block{
+    width: 37%;
+    height: 373px;
+    background-color: #787878;
+    background-image: url(../assets/images/bg-loading.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.girls-block{
+    width: 49%;
+    height: 707px;
+    background-image: url(../assets/images/bg-girls.svg);
+}
+.girls-text-block{
+    width: 23%;
+    height: 707px;
+    background-color: #B69AB4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.part-girls-text{
+    padding-top: 19px;
+    padding-bottom: 19px;
+    size: fit-content;
+    width: 86%;
+}
+.big-text-girls {
+    position: relative;
+    background-color: #D8C7D7;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-height: 60px; /* чтобы текст не схлопывался */
+    overflow: hidden;
+}
+
+.big-text-girls p {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.small-text-girls{
+    height: fit-content;
+    p{
+        color: #ffffff;
+        font-size: 37px;
+        font-weight: bold;
+    }
+}
+
+.finger-block{
+    width: 28%;
+    height: 707px;
+    background-image: url(../assets/images/bg-finger.svg);
+    position: relative;
+}
+.finger-block-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.up-finger-block{
+    position: relative;
+    width: 100%;
+    height: 76%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-finger-block{
+    width: 100%;
+    height: 24%;
+}
+
+.braid-2-block{
+    width: 100%;
+    height: 181px;
+    background-color: #CEC8D1;
+    overflow: hidden;
+}
+.left-ball-block{
+    width: 60%;
+    height: 788px;
+}
+.braids-block{
+    width: 100%;
+    height: 394px;
+    background-image: url(../assets/images/bg-cosmic-2.svg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20.5%;
+    padding-right: 20.5%;
+    box-sizing: border-box;/* padding включается в размеры */
+}
+.neirolink-block{
+    width: 100%;
+    height: 394px;
+    background-image: url(../assets/images/bg-neiro-links.svg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 4% 1% 4%;
+    font-size: 110px;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+.neiro-text-1{
+    margin-right: auto; /* прибивает к левому краю */
+}
+.neiro-text-2{
+    margin-left: auto;/* прибивает вправо */
+}
+.neiro-text-3{
+    margin-left: 12%;
+}
+.ball-block{
+    width: 40%;
+    height: 788px;
+    background-image: url(../assets/images/bg-big-circle.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 40px;
+    overflow: hidden;
+}
+
+.logo{
+    padding: 30px;
+    width: 219px;
+    height: 35px;
+}
+.yarn-1{
+    width: 902px;
+    height: 513px;
+}
+.yarn-2{
+    width: 910px;
+    height: 517px;
+}
+.yarn-3{
+    width: 908px;
+    height: 515px;
+}
+
+footer{
+    width: 100%;
+    height: 118px;
+    background-image: url(../assets/images/bg-footer.svg);
+    font-weight:bold;
+    font-size: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #ffffff;
+}
+

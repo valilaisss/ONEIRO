@@ -1,0 +1,617 @@
+/* АНИМАЦИЯ МИГАЮЩЕГО ТЕКСТА */
+.blink-text-animation{
+    p{
+    -webkit-animation: blink 0.5s linear infinite;
+    animation: blink 0.5s linear infinite;}
+}
+@-webkit-keyframes blink {
+    100% { color: rgba(255, 255, 255, 0); }
+}
+
+@keyframes blink {
+    100% { color: rgba(255, 255, 255, 0); } 
+}
+
+
+
+.quick-image-changer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.quick-image-changer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: strobeFlash 0.3s infinite;
+}
+/* тайминг для всех детей */
+.quick-image-changer img:nth-child(1) { animation-delay: 0s; }
+.quick-image-changer img:nth-child(2) { animation-delay: 0.1s; }
+.quick-image-changer img:nth-child(3) { animation-delay: 0.2s; }
+@keyframes strobeFlash {
+    0%, 33% { opacity: 1; }
+    34%, 100% { opacity: 0; }
+}
+
+
+/* АНИМАЦИЯ КРУТЯЩИХСЯ ЗВЕЗД */
+.star {
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.star:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+
+
+/* АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ ЛИЦ */
+.faces-track-left, .faces-track-right {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.faces-track-left {
+    left: 0;
+    width: calc(407px * 2);
+    animation: facesScrollToCenterLeft 3s linear infinite;
+}
+
+.faces-track-right {
+    right: 0;
+    width: calc(407px * 2);
+    animation: facesScrollToCenterRight 3s linear infinite;
+}
+
+/* справа  налево  */
+@keyframes facesScrollToCenterLeft {
+    0% {
+        transform: translateX(-50%); /* начинаем слева */
+    }
+    100% {
+        transform: translateX(0); /* двигаемся вправо */
+    }
+}
+
+/*  слева  направо*/
+@keyframes facesScrollToCenterRight {
+    0% {
+        transform: translateX(50%); /* начинаем справа */
+    }
+    100% {
+        transform: translateX(0); /* двигаемся влево  */
+    }
+}
+
+
+
+/* КРУТЯЩИЙСЯ 3Д ЖГУТ */
+.rotate-x-perspective {
+    animation: rotateXPerspective 3s linear infinite;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateX(var(--angle, 0deg));
+}
+.rotate-x-perspective-fast {
+    animation: rotateXPerspective 2s linear infinite;
+    transform-style: preserve-3d;
+    transform: perspective(700px) rotateX(var(--angle, 0deg));
+}
+@keyframes rotateXPerspective {
+    0% {
+        --angle: 0deg;
+        transform: perspective(600px) rotateX(0deg);
+    }
+    100% {
+        --angle: 360deg;
+        transform: perspective(600px) rotateX(360deg);
+    }
+}
+
+
+/* ВРАЩЕНИЕ КРУГОВ ВОКРУГ СЕБЯ */
+.spinning-image-right {
+    animation: spinRight 5s linear infinite;
+    transform-origin: center;
+}
+.spinning-image-left {
+    animation: spinLeft 5s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes spinRight {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spinLeft {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+
+
+
+/* АНИМАЦИЯ СКАНИРОВАНИЯ */
+/* гориз линия сканирования */
+.scan-line-horizontal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B69AB4;
+    animation: scanHorizontal 5s linear infinite;
+    z-index: 10;
+}
+
+/* вертикальная линия сканирования */
+.scan-line-vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #B69AB4;
+    animation: scanVertical 5s linear infinite;
+    z-index: 10;
+}
+
+/* анимация горизонт линиия скана */
+@keyframes scanHorizontal {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: calc(100% - 2px);
+    }
+}
+
+/* анимация вертикальной линии */
+@keyframes scanVertical {
+    0%, 100% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 2px);
+    }
+}
+
+
+
+
+/*ЛЕТАЮЩИЕ КВАДРАТЫ */
+.floating-square {
+    position: absolute;
+    width: var(--size, 25px);
+    height: var(--size, 25px);
+    border: 4px solid white;
+    background-color: white;
+    animation: floatUpInfinite var(--duration, 5s) linear infinite;
+    animation-delay: var(--delay, 0s);
+    left: var(--position, 10%);
+    bottom: -50px; /* начинают ниже блока */
+}
+
+/*анимация снизу вверх*/
+@keyframes floatUpInfinite {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+    }
+    50% {
+        transform: translateY(var(--mid-y, -264px)) rotate(180deg) scale(1);
+    }
+    100% {
+        transform: translateY(var(--end-y, -600px)) rotate(360deg) scale(0.8);
+    }
+}
+/*стили всех 20ти квадратовх*/
+.floating-square:nth-child(1) {
+    --size: 20px;
+    --duration: 6s;
+    --delay: 0s;
+    --position: 5%;
+    --mid-y: -250px;
+    --end-y: -600px;
+}
+
+.floating-square:nth-child(2) {
+    --size: 35px;
+    --duration: 9s;
+    --delay: 1s;
+    --position: 15%;
+    --mid-y: -300px;
+    --end-y: -700px;
+}
+
+.floating-square:nth-child(3) {
+    --size: 25px;
+    --duration: 7.5s;
+    --delay: 2s;
+    --position: 25%;
+    --mid-y: -280px;
+    --end-y: -650px;
+}
+
+.floating-square:nth-child(4) {
+    --size: 40px;
+    --duration: 10s;
+    --delay: 3s;
+    --position: 35%;
+    --mid-y: -320px;
+    --end-y: -750px;
+}
+
+.floating-square:nth-child(5) {
+    --size: 15px;
+    --duration: 5s;
+    --delay: 4s;
+    --position: 45%;
+    --mid-y: -200px;
+    --end-y: -500px;
+}
+
+.floating-square:nth-child(6) {
+    --size: 30px;
+    --duration: 8s;
+    --delay: 5s;
+    --position: 55%;
+    --mid-y: -290px;
+    --end-y: -680px;
+}
+
+.floating-square:nth-child(7) {
+    --size: 22px;
+    --duration: 7s;
+    --delay: 6s;
+    --position: 65%;
+    --mid-y: -270px;
+    --end-y: -640px;
+}
+
+.floating-square:nth-child(8) {
+    --size: 38px;
+    --duration: 11s;
+    --delay: 7s;
+    --position: 75%;
+    --mid-y: -350px;
+    --end-y: -800px;
+}
+
+.floating-square:nth-child(9) {
+    --size: 18px;
+    --duration: 5.5s;
+    --delay: 8s;
+    --position: 85%;
+    --mid-y: -230px;
+    --end-y: -560px;
+}
+
+.floating-square:nth-child(10) {
+    --size: 32px;
+    --duration: 8.5s;
+    --delay: 9s;
+    --position: 95%;
+    --mid-y: -310px;
+    --end-y: -720px;
+}
+
+.floating-square:nth-child(11) {
+    --size: 28px;
+    --duration: 9.5s;
+    --delay: 10s;
+    --position: 8%;
+    --mid-y: -330px;
+    --end-y: -760px;
+}
+
+.floating-square:nth-child(12) {
+    --size: 42px;
+    --duration: 12s;
+    --delay: 11s;
+    --position: 22%;
+    --mid-y: -380px;
+    --end-y: -860px;
+}
+
+.floating-square:nth-child(13) {
+    --size: 17px;
+    --duration: 6.5s;
+    --delay: 12s;
+    --position: 38%;
+    --mid-y: -240px;
+    --end-y: -580px;
+}
+
+.floating-square:nth-child(14) {
+    --size: 37px;
+    --duration: 10.5s;
+    --delay: 13s;
+    --position: 52%;
+    --mid-y: -340px;
+    --end-y: -780px;
+}
+
+.floating-square:nth-child(15) {
+    --size: 23px;
+    --duration: 7s;
+    --delay: 14s;
+    --position: 68%;
+    --mid-y: -260px;
+    --end-y: -620px;
+}
+
+.floating-square:nth-child(16) {
+    --size: 33px;
+    --duration: 8s;
+    --delay: 15s;
+    --position: 82%;
+    --mid-y: -300px;
+    --end-y: -700px;
+}
+
+.floating-square:nth-child(17) {
+    --size: 19px;
+    --duration: 6s;
+    --delay: 16s;
+    --position: 12%;
+    --mid-y: -220px;
+    --end-y: -540px;
+}
+
+.floating-square:nth-child(18) {
+    --size: 41px;
+    --duration: 11.5s;
+    --delay: 17s;
+    --position: 28%;
+    --mid-y: -370px;
+    --end-y: -840px;
+}
+
+.floating-square:nth-child(19) {
+    --size: 26px;
+    --duration: 7.5s;
+    --delay: 18s;
+    --position: 42%;
+    --mid-y: -290px;
+    --end-y: -680px;
+}
+
+.floating-square:nth-child(20) {
+    --size: 36px;
+    --duration: 9s;
+    --delay: 19s;
+    --position: 58%;
+    --mid-y: -320px;
+    --end-y: -740px;
+}
+
+/* двигающаяся сетка */
+.gradient-2-block {
+    position: relative;
+    background-image: url(../assets/images/grid-bg.svg);
+    animation: bg-scrolling-reverse 15s infinite linear;
+}
+
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+
+
+.animation-back-and-forth-3d {
+    animation: pulse-perspective 4s infinite ease-in-out;
+}
+
+@keyframes pulse-perspective {
+    0%, 100% {
+        transform: perspective(1000px) translateZ(-80px);
+    }
+    50% {
+        transform: perspective(600px) translateZ(80px);
+    }
+}
+
+.animation-y{
+    animation: rotate-y 4s infinite linear;
+}
+
+@keyframes rotate-y {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+
+/*АНИМАЦИЯ ЛИНИЙ ЗАГРУЗКИ*/
+.loading-track-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+    height: 100%;
+    animation: loading-left-right 8s linear infinite;
+}
+.loading-track-right {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+    height: 100%;
+    animation: loading-right-left 8s linear infinite;
+}
+
+
+@keyframes loading-right-left {
+    0% {
+        transform: translateY(-50%) translateX(0);
+    }
+    100% {
+        transform: translateY(-50%) translateX(-50%);
+    }
+}
+@keyframes loading-left-right {
+    0% {
+        transform: translateY(-50%) translateX(-50%);
+    }
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+
+
+/*АНИМАЦИЯ СМЕНЫ ИНФОРМАЦИИ В ТАБЛИЦЕ*/
+.text-changer {
+    position: relative;
+}
+
+.text-changer p {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    opacity: 0;
+    animation: textStrobe 1.5s infinite;
+}
+
+/* задержка для каждого ребекна*/
+.text-changer p:nth-child(1) { animation-delay: 0s; }
+.text-changer p:nth-child(2) { animation-delay: 0.3s; }
+.text-changer p:nth-child(3) { animation-delay: 0.6s; }
+.text-changer p:nth-child(4) { animation-delay: 0.9s; }
+.text-changer p:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes textStrobe {
+    0%, 20% {
+        opacity: 1;
+    }
+    21%, 100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/*АНИМАЦИЯ СМЕНЯЮЩИХСЯ ОТПЕЧАТКОВ ПАЛЬЦЕВ*/
+.image-changer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.image-changer img {
+    position: absolute;
+    object-fit: contain;
+    animation: strobeFlash 2s infinite;
+    opacity: 0;
+}
+.image-changer img:nth-child(1) { animation-delay: 0s; }
+.image-changer img:nth-child(2) { animation-delay: 0.4s; }
+.image-changer img:nth-child(3) { animation-delay: 0.8s; }
+.image-changer img:nth-child(4) { animation-delay: 1.2s; }
+.image-changer img:nth-child(5) { animation-delay: 1.6s; }
+
+@keyframes strobeFlash {
+    0%, 20% { opacity: 1; }
+    21%, 100% { opacity: 0; }
+}
+
+
+/*ПУЛЬСИРУЮЩИЕ ШАРЫ*/
+
+.pulsing-ball {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: white;
+    animation: pulseScale 3s ease-in-out infinite;
+}
+
+@keyframes pulseScale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.81);
+        opacity: 0.5;
+    }
+}
+
+.neiro-text-1 p,
+.neiro-text-2 p,
+.neiro-text-3 p {
+    position: relative;
+    display: inline-block;
+    animation: neiroFloat 3s ease-in-out infinite;
+    opacity: 1;
+}
+
+.neiro-text-1 p { animation-delay: 0s; }
+.neiro-text-2 p { animation-delay: 0.5s; }
+.neiro-text-3 p { animation-delay: 1s; }
+
+@keyframes neiroFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-15px) scale(1.05);
+        opacity: 0.5;
+    }
+}
+
+
+
+/*АНИМАЦИЯ СКАНИРОВАНИЯ ШАРА*/
+.move-container {
+    animation: moveInOut 8s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+.spin-container {
+    animation: spin3D 3s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.spin-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes spin3D {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+@keyframes moveInOut {
+    0%, 100% {
+        transform: translateZ(-100px);
+    }
+    50% {
+        transform: translateZ(100px);
+    }
+}
+
+
+
