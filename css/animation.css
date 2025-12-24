@@ -510,6 +510,19 @@
 
 
 
+/*АНИМАЦИЯ ПУЛЬСИРУЮЩЕЙ РАМКИ ОТПЕЧАТКОВ ПАЛЬЦЕВ*/
+.animation-back-and-forth-3d-finger-frame {
+    animation: pulse-perspective 0.35s infinite ease-in-out;
+}
+
+@keyframes pulse-perspective {
+    0%, 100% {
+        transform: perspective(450px) translateZ(-50px);
+    }
+    50% {
+        transform: perspective(2000px) translateZ(50px);
+    }
+}
 
 /*АНИМАЦИЯ СМЕНЯЮЩИХСЯ ОТПЕЧАТКОВ ПАЛЬЦЕВ*/
 .image-changer {
@@ -521,20 +534,23 @@
 .image-changer img {
     position: absolute;
     object-fit: contain;
-    animation: strobeFlash 2s infinite;
+    animation: strobeFlash 1.5s infinite;
     opacity: 0;
 }
 .image-changer img:nth-child(1) { animation-delay: 0s; }
-.image-changer img:nth-child(2) { animation-delay: 0.4s; }
-.image-changer img:nth-child(3) { animation-delay: 0.8s; }
-.image-changer img:nth-child(4) { animation-delay: 1.2s; }
-.image-changer img:nth-child(5) { animation-delay: 1.6s; }
+.image-changer img:nth-child(2) { animation-delay: 0.3s; }
+.image-changer img:nth-child(3) { animation-delay: 0.6s; }
+.image-changer img:nth-child(4) { animation-delay: 0.9s; }
+.image-changer img:nth-child(5) { animation-delay: 1.2s; }
 
 @keyframes strobeFlash {
-    0%, 20% { opacity: 1; }
-    21%, 100% { opacity: 0; }
+    0%, 20% {
+        opacity: 1;
+    }
+    21%, 100% {
+        opacity: 0;
+    }
 }
-
 
 /*ПУЛЬСИРУЮЩИЕ ШАРЫ*/
 
