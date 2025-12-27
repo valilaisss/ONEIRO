@@ -1,4 +1,4 @@
-<svg width="1152" height="394" viewBox="0 0 1152 394" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1157" height="394" viewBox="0 0 1157 394" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_920_6669)">
 <path d="M-12 -8H1164V412H-12V-8Z" fill="white" fill-opacity="0.8"/>
 <path d="M-12 -8H1164V412H-12V-8Z" fill="url(#paint0_linear_920_6669)"/>
@@ -37,7 +37,7 @@
 <stop offset="1" stop-color="#A58AA2"/>
 </linearGradient>
 <clipPath id="clip0_920_6669">
-<rect width="1152" height="394" fill="white"/>
+<rect width="1157" height="394" fill="white"/>
 </clipPath>
 </defs>
 </svg>

@@ -28,7 +28,6 @@
     opacity: 0;
     animation: strobeFlash 0.3s infinite;
 }
-/* тайминг для всех детей */
 .quick-image-changer img:nth-child(1) { animation-delay: 0s; }
 .quick-image-changer img:nth-child(2) { animation-delay: 0.1s; }
 .quick-image-changer img:nth-child(3) { animation-delay: 0.2s; }
@@ -60,33 +59,31 @@
 
 .faces-track-left {
     left: 0;
-    width: calc(407px * 2);
+    width: calc(21.2vw * 2);
     animation: facesScrollToCenterLeft 3s linear infinite;
 }
 
 .faces-track-right {
     right: 0;
-    width: calc(407px * 2);
+    width: calc(21.2vw * 2);
     animation: facesScrollToCenterRight 3s linear infinite;
 }
 
-/* справа  налево  */
 @keyframes facesScrollToCenterLeft {
     0% {
-        transform: translateX(-50%); /* начинаем слева */
+        transform: translateX(-50%);
     }
     100% {
-        transform: translateX(0); /* двигаемся вправо */
+        transform: translateX(0);
     }
 }
 
-/*  слева  направо*/
 @keyframes facesScrollToCenterRight {
     0% {
-        transform: translateX(50%); /* начинаем справа */
+        transform: translateX(50%);
     }
     100% {
-        transform: translateX(0); /* двигаемся влево  */
+        transform: translateX(0);
     }
 }
 
@@ -139,47 +136,43 @@
 
 
 /* АНИМАЦИЯ СКАНИРОВАНИЯ */
-/* гориз линия сканирования */
 .scan-line-horizontal {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 0.26vw;
     background-color: #B69AB4;
     animation: scanHorizontal 5s linear infinite;
     z-index: 10;
 }
 
-/* вертикальная линия сканирования */
 .scan-line-vertical {
     position: absolute;
     top: 0;
     left: 0;
-    width: 5px;
+    width: 0.26vw;
     height: 100%;
     background-color: #B69AB4;
     animation: scanVertical 5s linear infinite;
     z-index: 10;
 }
 
-/* анимация горизонт линиия скана */
 @keyframes scanHorizontal {
     0%, 100% {
         top: 0;
     }
     50% {
-        top: calc(100% - 2px);
+        top: calc(100% - 0.1vw);
     }
 }
 
-/* анимация вертикальной линии */
 @keyframes scanVertical {
     0%, 100% {
         left: 0;
     }
     50% {
-        left: calc(100% - 2px);
+        left: calc(100% - 0.1vw);
     }
 }
 
@@ -189,207 +182,206 @@
 /*ЛЕТАЮЩИЕ КВАДРАТЫ */
 .floating-square {
     position: absolute;
-    width: var(--size, 25px);
-    height: var(--size, 25px);
-    border: 4px solid white;
+    width: var(--size, 1.3vw);
+    height: var(--size, 1.3vw);
+    border: 0.21vw solid white;
     background-color: white;
     animation: floatUpInfinite var(--duration, 5s) linear infinite;
     animation-delay: var(--delay, 0s);
     left: var(--position, 10%);
-    bottom: -50px; /* начинают ниже блока */
+    bottom: -2.6vw;
 }
 
-/*анимация снизу вверх*/
 @keyframes floatUpInfinite {
     0% {
         transform: translateY(0) rotate(0deg) scale(0.8);
     }
     50% {
-        transform: translateY(var(--mid-y, -264px)) rotate(180deg) scale(1);
+        transform: translateY(var(--mid-y, -13.75vw)) rotate(180deg) scale(1);
     }
     100% {
-        transform: translateY(var(--end-y, -600px)) rotate(360deg) scale(0.8);
+        transform: translateY(var(--end-y, -31.25vw)) rotate(360deg) scale(0.8);
     }
 }
-/*стили всех 20ти квадратовх*/
+
 .floating-square:nth-child(1) {
-    --size: 20px;
+    --size: 1.04vw;
     --duration: 6s;
     --delay: 0s;
     --position: 5%;
-    --mid-y: -250px;
-    --end-y: -600px;
+    --mid-y: -13vw;
+    --end-y: -31.25vw;
 }
 
 .floating-square:nth-child(2) {
-    --size: 35px;
+    --size: 1.82vw;
     --duration: 9s;
     --delay: 1s;
     --position: 15%;
-    --mid-y: -300px;
-    --end-y: -700px;
+    --mid-y: -15.63vw;
+    --end-y: -36.46vw;
 }
 
 .floating-square:nth-child(3) {
-    --size: 25px;
+    --size: 1.3vw;
     --duration: 7.5s;
     --delay: 2s;
     --position: 25%;
-    --mid-y: -280px;
-    --end-y: -650px;
+    --mid-y: -14.58vw;
+    --end-y: -33.85vw;
 }
 
 .floating-square:nth-child(4) {
-    --size: 40px;
+    --size: 2.08vw;
     --duration: 10s;
     --delay: 3s;
     --position: 35%;
-    --mid-y: -320px;
-    --end-y: -750px;
+    --mid-y: -16.67vw;
+    --end-y: -39.06vw;
 }
 
 .floating-square:nth-child(5) {
-    --size: 15px;
+    --size: 0.78vw;
     --duration: 5s;
     --delay: 4s;
     --position: 45%;
-    --mid-y: -200px;
-    --end-y: -500px;
+    --mid-y: -10.42vw;
+    --end-y: -26.04vw;
 }
 
 .floating-square:nth-child(6) {
-    --size: 30px;
+    --size: 1.56vw;
     --duration: 8s;
     --delay: 5s;
     --position: 55%;
-    --mid-y: -290px;
-    --end-y: -680px;
+    --mid-y: -15.1vw;
+    --end-y: -35.42vw;
 }
 
 .floating-square:nth-child(7) {
-    --size: 22px;
+    --size: 1.15vw;
     --duration: 7s;
     --delay: 6s;
     --position: 65%;
-    --mid-y: -270px;
-    --end-y: -640px;
+    --mid-y: -14.06vw;
+    --end-y: -33.33vw;
 }
 
 .floating-square:nth-child(8) {
-    --size: 38px;
+    --size: 1.98vw;
     --duration: 11s;
     --delay: 7s;
     --position: 75%;
-    --mid-y: -350px;
-    --end-y: -800px;
+    --mid-y: -18.23vw;
+    --end-y: -41.67vw;
 }
 
 .floating-square:nth-child(9) {
-    --size: 18px;
+    --size: 0.94vw;
     --duration: 5.5s;
     --delay: 8s;
     --position: 85%;
-    --mid-y: -230px;
-    --end-y: -560px;
+    --mid-y: -11.98vw;
+    --end-y: -29.17vw;
 }
 
 .floating-square:nth-child(10) {
-    --size: 32px;
+    --size: 1.67vw;
     --duration: 8.5s;
     --delay: 9s;
     --position: 95%;
-    --mid-y: -310px;
-    --end-y: -720px;
+    --mid-y: -16.15vw;
+    --end-y: -37.5vw;
 }
 
 .floating-square:nth-child(11) {
-    --size: 28px;
+    --size: 1.46vw;
     --duration: 9.5s;
     --delay: 10s;
     --position: 8%;
-    --mid-y: -330px;
-    --end-y: -760px;
+    --mid-y: -17.19vw;
+    --end-y: -39.58vw;
 }
 
 .floating-square:nth-child(12) {
-    --size: 42px;
+    --size: 2.19vw;
     --duration: 12s;
     --delay: 11s;
     --position: 22%;
-    --mid-y: -380px;
-    --end-y: -860px;
+    --mid-y: -19.79vw;
+    --end-y: -44.79vw;
 }
 
 .floating-square:nth-child(13) {
-    --size: 17px;
+    --size: 0.89vw;
     --duration: 6.5s;
     --delay: 12s;
     --position: 38%;
-    --mid-y: -240px;
-    --end-y: -580px;
+    --mid-y: -12.5vw;
+    --end-y: -30.21vw;
 }
 
 .floating-square:nth-child(14) {
-    --size: 37px;
+    --size: 1.93vw;
     --duration: 10.5s;
     --delay: 13s;
     --position: 52%;
-    --mid-y: -340px;
-    --end-y: -780px;
+    --mid-y: -17.71vw;
+    --end-y: -40.63vw;
 }
 
 .floating-square:nth-child(15) {
-    --size: 23px;
+    --size: 1.2vw;
     --duration: 7s;
     --delay: 14s;
     --position: 68%;
-    --mid-y: -260px;
-    --end-y: -620px;
+    --mid-y: -13.54vw;
+    --end-y: -32.29vw;
 }
 
 .floating-square:nth-child(16) {
-    --size: 33px;
+    --size: 1.72vw;
     --duration: 8s;
     --delay: 15s;
     --position: 82%;
-    --mid-y: -300px;
-    --end-y: -700px;
+    --mid-y: -15.63vw;
+    --end-y: -36.46vw;
 }
 
 .floating-square:nth-child(17) {
-    --size: 19px;
+    --size: 0.99vw;
     --duration: 6s;
     --delay: 16s;
     --position: 12%;
-    --mid-y: -220px;
-    --end-y: -540px;
+    --mid-y: -11.46vw;
+    --end-y: -28.13vw;
 }
 
 .floating-square:nth-child(18) {
-    --size: 41px;
+    --size: 2.14vw;
     --duration: 11.5s;
     --delay: 17s;
     --position: 28%;
-    --mid-y: -370px;
-    --end-y: -840px;
+    --mid-y: -19.27vw;
+    --end-y: -43.75vw;
 }
 
 .floating-square:nth-child(19) {
-    --size: 26px;
+    --size: 1.35vw;
     --duration: 7.5s;
     --delay: 18s;
     --position: 42%;
-    --mid-y: -290px;
-    --end-y: -680px;
+    --mid-y: -15.1vw;
+    --end-y: -35.42vw;
 }
 
 .floating-square:nth-child(20) {
-    --size: 36px;
+    --size: 1.88vw;
     --duration: 9s;
     --delay: 19s;
     --position: 58%;
-    --mid-y: -320px;
-    --end-y: -740px;
+    --mid-y: -16.67vw;
+    --end-y: -38.54vw;
 }
 
 /* двигающаяся сетка */
@@ -397,6 +389,7 @@
     position: relative;
     background-image: url(../assets/images/grid-bg.svg);
     animation: bg-scrolling-reverse 15s infinite linear;
+    background-size: 155vw 137.9vw;
 }
 
 @keyframes bg-scrolling-reverse {
@@ -433,6 +426,7 @@
         transform: perspective(1000px) rotateY(360deg);
     }
 }
+
 
 
 /*АНИМАЦИЯ ЛИНИЙ ЗАГРУЗКИ*/
@@ -487,12 +481,11 @@
 .text-changer p {
     position: absolute;
     top: 0;
-    left: 8px;
+    left: 0.42vw;
     opacity: 0;
     animation: textStrobe 1.5s infinite;
 }
 
-/* задержка для каждого ребекна*/
 .text-changer p:nth-child(1) { animation-delay: 0s; }
 .text-changer p:nth-child(2) { animation-delay: 0.3s; }
 .text-changer p:nth-child(3) { animation-delay: 0.6s; }
@@ -555,10 +548,6 @@
 /*ПУЛЬСИРУЮЩИЕ ШАРЫ*/
 
 .pulsing-ball {
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    background: white;
     animation: pulseScale 3s ease-in-out infinite;
 }
 
@@ -591,7 +580,7 @@
         opacity: 1;
     }
     50% {
-        transform: translateY(-15px) scale(1.05);
+        transform: translateY(-0.78vw) scale(1.05);
         opacity: 0.5;
     }
 }
@@ -622,12 +611,9 @@
 
 @keyframes moveInOut {
     0%, 100% {
-        transform: translateZ(-100px);
+        transform: translateZ(-5.21vw);
     }
     50% {
-        transform: translateZ(100px);
+        transform: translateZ(5.21vw);
     }
 }
-
-
-

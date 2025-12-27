@@ -12,35 +12,39 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 53%;
-    height: 544px;
-    background-image: url("../assets/images/bg-yarn.png");
+    width: 53vw;
+    height: 28.3vw;
+    background-image: url("../assets/images/bg-yarn.svg");
+    background-size: cover;
     p{
-        padding: 30px;
+        padding: 1.6vw;
         font-style: oblique;
-        font-size: 110px;
+        font-size: 5.7vw;
         font-weight: bold;
         color: white; 
     }
 }
 
 .yarn-block{
-    width: 47%;
-    height: 544px;
+    width: 47vw;
+    height: 28.3vw;
     background-color: #B69AB4;
     background-image: url(../assets/images/lines-bg.svg);
+    background-size: cover;
 }
 .stars-block{
     position: relative;
-    width: 53%;
-    height: 544px;
+    width: 53vw;
+    height: 28.3vw;
     background-image: url("../assets/images/bg\ stars.png");
+    background-size: cover;
     display: grid;
-    grid-template-columns: repeat(9, 1fr); /* 9 столбцов */
-    grid-template-rows: repeat(5, 1fr);    /* 5 строк */
-    gap: 11px; 
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.6vw; 
 }
 .stars-text-overlay {
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,17 +54,17 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 30px;
-    padding-top: 100px;
+    padding-left: 1.6vw;
+    padding-top: 5.2vw;
     z-index: 1;
     color: white;
     h1{
-        font-size: 80px;
+        font-size: 4vw;
         font-weight: bold;
         font-style: oblique;
     }
     h2{
-        font-size: 52px;
+        font-size: 2.6vw;
         font-weight: bold;
     }
 }
@@ -77,45 +81,49 @@ body{
     opacity: 0;
 }
 
-
+.big-face-img{
+    width: 25.8vw;
+    height: 22.6vw;
+}
 .laborotory-block {
-    width: 47%;
-    height: 544px;
+    width: 47vw;
+    height: 28.3vw;
     background-color: #BFC6D3;
     background-image: url("../assets/images/bg\ faces.png");
     position: relative;
     overflow: hidden;
+    background-size: contain
 }
 .laborotory-text {
-    padding-top: 46px;
-    padding-left: 53px;
-    padding-right: 53px;
-    width: 800px;
-    height: 233px;
+    padding-top: 2.4vw;
+    padding-left: 2.8vw;
+    padding-right: 2.8vw;
+    width: 41.7vw;
+    height: 12.1vw;
     display: flex;
     flex-direction: column;
     color: #ffffff;
 }
 .laborotory-text-norm {
-    font-size: 80px;
+    font-size: 4.2vw;
     font-weight: bold;
 }
 
 .laborotory-text-obliq {
-    font-size: 80px;
+    font-size: 4.2vw;
     font-weight: bold;
     font-style: oblique;
     display: flex;
 }
 .lab-right {
-    margin-left: auto; /* прибивает к правой части только слово лаборатория */
+    margin-left: auto;
 }
 .faces-container {
     display: flex;
-    padding-top: 46px;
-    padding-left: 53px;
-    padding-right: 53px;
-    height: 168px;
+    padding-top: 2.4vw;
+    padding-left: 2.8vw;
+    padding-right: 2.8vw;
+    height: 8.8vw;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -130,32 +138,54 @@ body{
 
 
 .faces-img {
-    width: 407px;
-    height: 168px;
+    width: 21.2vw;
+    height: 8.8vw;
     flex-shrink: 0;
 }
 
 
 .braid-1-block{
-    width: 100%;
-    height: 87px;
+    width: 100vw;
+    height: 4.6vw;
     background-image: url(../assets/images/braid-bg.svg);
+    background-size: cover;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.braid-1-img{
+    width: 106.9vw;
+    height: 4.5vw;
 }
 .brain-block{
     position: relative;
-    width: 28%;
-    height: 528px;
+    width: 28vw;
+    height: 27.5vw;
     background-image:  url(../assets/images/bg-brain.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center; 
 }
+.brain-img{
+    width: 22vw;
+    height: 24.3vw;
+}
+.spinning-image-right{
+    width: 27.7vw;
+    height: 27.1vw;
+}
+.spinning-image-left{
+    width: 13.7vw;
+    height: 13.8vw;
+}
 .cosmo-block{
-    position: relative; /* создаем точку отсчета для детей */
-    width: 44%;
-    height: 528px;
+    position: relative;
+    width: 44vw;
+    height: 27.5vw;
     background-image:  url(../assets/images/bg-cosmic.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -172,31 +202,35 @@ body{
 }
 .gradient-1-block {
     position: relative;
-    width: 28%;
-    height: 528px;
+    width: 28vw;
+    height: 27.5vw;
     background-image: url(../assets/images/bg-gradient-1.svg);
+    background-size: cover;
     overflow: hidden; 
 }
 
 .gradient-2-block{
-    width: 38%;
-    height: 556px;
-    background-color: #BFC6D3;
+    width: 38vw;
+    height: 29vw;
 }
 .spiral-block{
-    width: 25%;
-    height: 556px;
+    width: 25vw;
+    height: 29vw;
     background-color: #DDDDE5;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
+.big-spiral-img{
+    width: 24.6vw;
+    height: 36.7vw;
+}
 .face-block{
-    width: 37%;
-    height: 556px;
-    background-color: #E1E4EC;
+    width: 37vw;
+    height: 29vw;
     background-image: url(../assets/images/faces-bg.svg);
+    background-size: cover;
     position: relative;
     display:flex;
     align-items: center;
@@ -214,10 +248,11 @@ body{
     justify-content: center; 
 }
 .load-left-block{
-    width: 38%;
-    height: 373px;
+    width: 38vw;
+    height: 19.4vw;
     background-color: #787878;
     background-image: url(../assets/images/bg-loading.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,25 +261,27 @@ body{
 }
 
 .load-text-block{
-    width: 25%;
-    height: 373px;
+    width: 25vw;
+    height: 19.4vw;
     background-color: #787878;
     background-image: url(../assets/images/bg-load-text.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     p{
-        font-size: 52px;
+        font-size: 2.7vw;
         font-weight: bold;
         color: #ffffff;
         text-align: center;
     }
 }
 .load-right-block{
-    width: 37%;
-    height: 373px;
+    width: 37vw;
+    height: 19.4vw;
     background-color: #787878;
-    background-image: url(../assets/images/bg-loading.svg);
+    background-image: url(../assets/images/bg\ load\ right.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,55 +289,62 @@ body{
     position: relative;
 }
 .girls-block{
-    width: 49%;
-    height: 707px;
+    width: 49vw;
+    height: 36.8vw;
     background-image: url(../assets/images/bg-girls.svg);
+    background-size: cover;
 }
 .girls-text-block{
-    width: 23%;
-    height: 707px;
+    width: 23vw;
+    height: 36.8vw;
     background-color: #B69AB4;
+}
+.girls-text-container{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 .part-girls-text{
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     size: fit-content;
     width: 86%;
 }
 .big-text-girls {
+    box-sizing: border-box;
     position: relative;
     background-color: #D8C7D7;
-    padding-left: 8px;
-    padding-right: 8px;
-    min-height: 60px; /* чтобы текст не схлопывался */
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
+    min-height: 2.6vw;
     overflow: hidden;
-}
-
-.big-text-girls p {
+    p{
     color: #ffffff;
-    font-size: 52px;
+    font-size: 2.7vw;
     font-weight: bold;
     margin: 0;
     white-space: nowrap;
+    }
 }
 
 .small-text-girls{
     height: fit-content;
     p{
         color: #ffffff;
-        font-size: 37px;
+        font-size: 1.9vw;
         font-weight: bold;
     }
 }
 
 .finger-block{
-    width: 28%;
-    height: 707px;
+    width: 28vw;
+    height: 36.8vw;
     background-image: url(../assets/images/bg-finger.svg);
+    background-size: cover;
     position: relative;
 }
 .finger-block-overlay{
@@ -324,87 +368,118 @@ body{
 }
 .bottom-finger-block{
     width: 100%;
-    height: 24%;
+    height: 8.9vw;
 }
-
+.frame-finger-img{
+    width: 20.4vw;
+    height: 23.8vw;
+}
+.finger-img{
+    width: 13vw;
+    height: 18.1vw;
+}
+.bottom-finger-img{
+    width: 28vw;
+    height: 8.9vw;
+}
 .braid-2-block{
-    width: 100%;
-    height: 181px;
+    width: 100vw;
+    height: 9.4vw;
     background-color: #CEC8D1;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .left-ball-block{
-    width: 60%;
-    height: 788px;
+    width: 60vw;
+    height: 41vw;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 .braids-block{
     width: 100%;
-    height: 394px;
+    height: 50%;
     background-image: url(../assets/images/bg-cosmic-2.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 20.5%;
     padding-right: 20.5%;
-    box-sizing: border-box;/* padding включается в размеры */
+    box-sizing: border-box;
+}
+.braid-2-img{
+    width: 116vw;
+    height: 9.4vw;
+}
+.pulsing-ball {
+    width: 5.47vw;
+    height: 5.47vw;
+    border-radius: 50%;
+    background: white;
 }
 .neirolink-block{
     width: 100%;
-    height: 394px;
+    height: 50%;
     background-image: url(../assets/images/bg-neiro-links.svg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 2% 4% 1% 4%;
-    font-size: 110px;
+    font-size: 5.7vw;
     font-weight: bold;
     box-sizing: border-box;
     color: #ffffff;
 }
 .neiro-text-1{
-    margin-right: auto; /* прибивает к левому краю */
+    margin-right: auto;
 }
 .neiro-text-2{
-    margin-left: auto;/* прибивает вправо */
+    margin-left: auto;
 }
 .neiro-text-3{
-    margin-left: 12%;
+    margin-left: 6.3vw;
 }
 .ball-block{
-    width: 40%;
-    height: 788px;
+    width: 40vw;
+    height: 41vw;
     background-image: url(../assets/images/bg-big-circle.svg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 40px;
+    perspective: 2.1vw;
     overflow: hidden;
 }
 
 .logo{
-    padding: 30px;
-    width: 219px;
-    height: 35px;
+    padding: 1.6vw;
+    width: 11.4vw;
+    height: 1.8vw;
 }
 .yarn-1{
-    width: 902px;
-    height: 513px;
+    width: 47vw;
+    height: 26.7vw;
 }
 .yarn-2{
-    width: 910px;
-    height: 517px;
+    width: 47.4vw;
+    height: 26.9vw;
 }
 .yarn-3{
-    width: 908px;
-    height: 515px;
+    width: 47.3vw;
+    height: 26.8vw;
 }
 
 footer{
-    width: 100%;
-    height: 118px;
+    width: 100vw;
+    height: 6.1vw;
     background-image: url(../assets/images/bg-footer.svg);
+    background-size: cover;
     font-weight:bold;
-    font-size: 37px;
+    font-size: 1.9vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -412,4 +487,444 @@ footer{
     padding-right: 5%;
     color: #ffffff;
 }
+.dekstop-only{
+    display:inherit;
+}
+.ipad-only{
+    display:none;
+}
+.phone-only{
+    display: none;
+}
+@media (max-width:1280px){
+    .braid-2-block{
+        width: 100vw;
+        height: 8vw;
+    }
+    footer{
+        width: 100vw;
+        height: 14vw;
+    }
+}
+@media (max-width:768px){
+    footer{
+        width: 100vw;
+        height: 6.5vw;
+    }
+    .gradient-2-block{
+        width: 20.6vw;
+        height: 40.6vw;
+    }
+    .spiral-block{
+        width: 29.6vw;
+        height: 40.6vw;
+    }
+    .face-block{
+        width: 49.8vw;
+        height: 40.6vw; 
+    }
+    .big-face-img{
+        width: 32.2vw;
+        height: 27.1vw;
+    }
+    .big-spiral-img{
+        width: 30vw;
+        height: 42vw;
+    }
+    .brain-block{
+        width: 30.1vw;
+        height: 30.1vw;
+    }
+    .cosmo-block{
+        width: 48.5vw;
+        height: 30.2vw;
+    }
+    .gradient-1-block {
+        width: 21.4vw;
+        height: 30.2vw;
+    }
+    .frame-girls{
+        background-color: #C8C6CF;
+        width: 14.8vw;
+        height: 52.2vw;
+    }
+    .dekstop-only{
+        display:none;
+    }
+    .ipad-only{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .phone-only{
+        display:none;
+    }
+    .girls-block{
+        width: 70.4vw;
+        height: 52.2vw;
+    }
+    .girls-text-block{
+        justify-content: none;
+        width: 50.5vw;
+        height: 61.6vw;
+    }
+    .girls-text-container{
+        padding-top: 3.3vw;
+        padding-bottom: 3.3vw;
+        padding-left: 3vw;
+    }
+    .part-girls-text{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .big-text-girls {
+        width: 31.1vw;
+        padding-left: 3.6vw;
+        padding-right: 3.6vw;
+        min-height: 4vw;
+        p{
+        font-size: 4.2vw;
+        margin-left: 0.5vw;
+        white-space: nowrap;
+        }
+    }
+    
+    .small-text-girls{
+        height: fit-content;
+        p{
+            font-size: 2.6vw;
+        }
+    }
+    .finger-block{
+        width: 49.5vw;
+        height: 61.6vw;
+    }
+    .frame-finger-img{
+        width: 29.4vw;
+        height: 34.6vw;
+    }
+    .finger-img{
+        width: 21.2vw;
+        height: 29.4vw;
+    }
+    .bottom-finger-img{
+        width: 49.5vw;
+        height: 15.8vw;
+    }
+    .bottom-finger-block{
+        width: 100%;
+        height: 15.8vw;
+    }
+    .up-finger-block{
+        width: 100%;
+        height: 45.8vw;
+    }
+    .braids-block{
+        width: 100vw;
+        height: 33.6vw;
+        padding-left: 20%;
+        padding-right: 20.5%;
+    }
+    .pulsing-ball {
+        width: 9vw;
+        height: 9vw;
+    }
+    .neirolink-block{
+        width: 66vw;
+        height: 34.9vw;
+        justify-content: space-between;
+        padding: 6% 4% 4% 4%;
+        font-size: 6.3vw;
+    }
+    .neiro-text-1{
+        margin-right: auto;
+    }
+    .neiro-text-2{
+        margin-left: auto;
+    }
+    .neiro-text-3{
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .ball-block{
+        width: 34vw;
+        height: 34.9vw;
+    }
+}
+@media (max-width:440px){
+    .dekstop-only{
+        display:none;
+    }
+    .ipad-only{
+        display:none;
+    }
+    .phone-only{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .yarn-text-block{
+        width: 100vw;
+        height: 54.2vw;
+        p{
+            padding: 3.5vw;
+            font-style: oblique;
+            font-size: 13vw;
+            font-weight: bold;
+            color: white; 
+        }
+    }
+    .logo{
+        padding: 0 3.5vw 3vw 3.5vw;
+        width: 21.8vw;
+        height: 3.5vw;
+    }
+    .yarn-block{
+        width: 100vw;
+        height: 60vw;
+    }
+    .stars-block{
+        width: 100vw;
+        height: 54.3vw;
+    }
+    .stars-text-overlay {
+        padding-left: 1vw;
+        padding-top: 11.8vw;
+        z-index: 1;
+        color: white;
+        h1{
+            font-size: 6.15vw;
+            font-weight: bold;
+            font-style: oblique;
+        }
+        h2{
+            font-size: 4.2vw;
+            font-weight: bold;
+        }
+    }
+    .laborotory-block{
+        width: 100vw;
+        height: 59.9vw;
+    }
 
+    
+    .laborotory-text {
+        padding-top: 4.8vw;
+        padding-left: 5.6vw;
+        padding-right: 5.6vw;
+        width: 41.7vw;
+        height: 12.1vw;
+    }
+    .laborotory-text-norm {
+        font-size: 9.75vw;
+    }
+    
+    .laborotory-text-obliq {
+        font-size: 9.75vw;
+    }
+    .lab-right {
+        margin-left: 11vw;
+    }
+    .faces-container {
+        padding-top: 4.8vw;
+        padding-left: 5.6vw;
+        padding-right: 5.6vw;
+        height: 18.5vw;
+    }
+    
+    .faces-img {
+        width: 42.4vw;
+        height: 18.5vw;
+        flex-shrink: 0;
+    }
+    .faces-track-left {
+        left: 0;
+        width: calc(21.2vw * 4);
+        animation: facesScrollToCenterLeft 3s linear infinite;
+    }
+    
+    .faces-track-right {
+        right: 0;
+        width: calc(21.2vw * 4);
+        animation: facesScrollToCenterRight 3s linear infinite;
+    }
+    .braid-1-block{
+        width: 100vw;
+        height: 10vw;
+    }
+    .braid-1-img{
+        width: 200vw;
+        height: 14.4vw;
+    }
+    .brain-block{
+        width: 100vw;
+        height: 100vw;
+    }
+    .brain-img{
+        width: 73.9vw;
+        height: 81.4vw;
+    }
+    .scan-line-vertical {
+        width: 1vw;
+    }
+    .scan-line-horizontal{
+        height: 1vw;
+    }
+    .cosmo-block{
+        width: 100vw;
+        height: 62.2vw;
+        background-size: cover;
+    }
+    .spinning-image-right{
+        width: 63.2vw;
+        height: 61.9vw;
+    }
+    .spinning-image-left{
+        width: 31.3vw;
+        height: 31.4vw;
+    }
+    .gradient-1-block {
+        width: 100vw;
+        height: 37.2vw;
+    }
+    .gradient-2-block{
+        width: 29.1vw;
+        height: 87.8vw;
+    }
+    .spiral-block{
+        width: 70.9vw;
+        height: 87.8vw;
+    }
+    .big-spiral-img{
+        width: 70.9vw;
+        height: 100vw;
+    }
+    .face-block{
+        width: 100vw;
+        height: 70.9vw;
+    }
+    .big-face-img{
+        width: 68vw;
+        height: 61.7vw;
+    }
+    .load-left-block{
+        width: 33.3vw;
+        height: 19.5vw;
+    }
+    .load-right-block{
+        width: 33.3vw;
+        height: 19.5vw;
+    }
+    .load-text-block{
+        width: 31.1vw;
+        height: 19.5vw;
+        p{
+            font-size: 3.3vw;
+        }
+    }
+    .girls-block{
+        background-color: #C8C6CF;
+        width: 100vw;
+        height: 75.42vw;
+    }
+    .girls-text-block{
+        width: 100vw;
+        height: 132.8vw;
+    }
+    .girls-text-container{
+        padding-top: 6.6vw;
+        padding-bottom: 6.6vw;
+        padding-left: 4vw;
+    }
+    .part-girls-text{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .big-text-girls {
+        width: 78vw;
+        padding-left: 7.2vw;
+        padding-right: 7.2vw;
+        min-height: 9.8vw;
+        p{
+        font-size: 10.5vw;
+        margin-left: 2vw;
+        white-space: nowrap;
+        }
+    }
+    
+    .small-text-girls{
+        height: fit-content;
+        p{
+            font-size: 6.5vw;
+        }
+    }
+    .finger-block{
+        width: 100vw;
+        height: 123.75vw;
+    }
+    .frame-finger-img{
+        width: 65.66vw;
+        height: 77.5vw;
+    }
+    .finger-img{
+        width: 48.1vw;
+        height: 66.5vw;
+    }
+    .bottom-finger-img{
+        width: 100vw;
+        height: 31.9vw;
+    }
+    .bottom-finger-block{
+        width: 100%;
+        height: 31.9vw;
+    }
+    .up-finger-block{
+        width: 100%;
+        height: 91.9vw;
+    }
+    .braid-2-block{
+        width: 115vw;
+        height: 12vw;
+    }
+    .braid-2-img{
+        width: 170vw;
+        height: 30vw;
+    }
+    .braids-block{
+        width: 100vw;
+        height: 33.1vw;
+        padding-left: 20.5vw;
+        padding-right: 21vw;
+    }
+    .pulsing-ball {
+        width: 9vw;
+        height: 9vw;
+    }
+    .neirolink-block{
+        width: 100vw;
+        height: 44.7vw;
+        justify-content: space-between;
+        padding: 6% 4% 4% 4%;
+        font-size: 10.45vw;
+    }
+    .neiro-text-1{
+        margin-right: auto;
+    }
+    .neiro-text-2{
+        margin-left: auto;
+    }
+    .neiro-text-3{
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .ball-block{
+        width: 100vw;
+        height: 104vw;
+    }
+    footer{
+        height: 7vw;
+        font-size: 2.5vw;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+    }
+}
