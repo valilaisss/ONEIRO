@@ -27,8 +27,10 @@ body{
 .video-1{
     width: 53vw;
     height: 28.3vw;
+    object-fit: cover;
 }
 .yarn-block{
+    overflow: hidden;
     width: 47vw;
     height: 28.3vw;
     background-color: #B69AB4;
