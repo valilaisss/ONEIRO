@@ -24,7 +24,10 @@ body{
         color: white; 
     }
 }
-
+.video-1{
+    width: 53vw;
+    height: 28.3vw;
+}
 .yarn-block{
     width: 47vw;
     height: 28.3vw;
