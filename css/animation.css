@@ -1,8 +1,8 @@
 /* АНИМАЦИЯ МИГАЮЩЕГО ТЕКСТА */
 .blink-text-animation{
     p{
-    -webkit-animation: blink 0.5s linear infinite;
-    animation: blink 0.5s linear infinite;}
+    -webkit-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;}
 }
 @-webkit-keyframes blink {
     100% { color: rgba(255, 255, 255, 0); }
@@ -12,30 +12,30 @@
     100% { color: rgba(255, 255, 255, 0); } 
 }
 
-
-
-.quick-image-changer {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.quick-image-changer img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: strobeFlash 0.3s infinite;
-}
-.quick-image-changer img:nth-child(1) { animation-delay: 0s; }
-.quick-image-changer img:nth-child(2) { animation-delay: 0.1s; }
-.quick-image-changer img:nth-child(3) { animation-delay: 0.2s; }
-@keyframes strobeFlash {
-    0%, 33% { opacity: 1; }
-    34%, 100% { opacity: 0; }
+.soft-blink-text-animation h1,
+.soft-blink-text-animation h2 {
+    -webkit-animation: soft-blink 2s ease-in-out infinite;
+    animation: soft-blink 2s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
+@-webkit-keyframes soft-blink {
+    0%, 100% { 
+        opacity: 1;
+    }
+    50% { 
+        opacity: 0.3;
+    }
+}
+
+@keyframes soft-blink {
+    0%, 100% { 
+        opacity: 1;
+    }
+    50% { 
+        opacity: 0.3;
+    }
+}
 
 /* АНИМАЦИЯ КРУТЯЩИХСЯ ЗВЕЗД */
 .star {
@@ -549,6 +549,18 @@
 
 .pulsing-ball {
     animation: pulseScale 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+.pulsing-ball:nth-child(1) {
+    animation-delay: 0s; /* первый шар сразу */
+}
+
+.pulsing-ball:nth-child(2) {
+    animation-delay: 0.5s; /* второй с задержкой */
+}
+
+.pulsing-ball:nth-child(3) {
+    animation-delay: 1s; /* третий тоже*/
 }
 
 @keyframes pulseScale {
@@ -561,6 +573,7 @@
     }
 }
 
+/*ПУЛЬСИРУЮЩИЙ ТЕКСТ НЕЙРО*/
 .neiro-text-1 p,
 .neiro-text-2 p,
 .neiro-text-3 p {
