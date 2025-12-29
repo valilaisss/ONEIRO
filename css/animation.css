@@ -548,7 +548,7 @@
 /*ПУЛЬСИРУЮЩИЕ ШАРЫ*/
 
 .pulsing-ball {
-    animation: pulseScale 3s ease-in-out infinite;
+    animation: pulseScale 3s ease-in-out infinite; 
     animation-delay: 0s;
 }
 .pulsing-ball:nth-child(1) {
